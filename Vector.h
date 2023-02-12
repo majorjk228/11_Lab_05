@@ -11,9 +11,9 @@ class Vector
 public:
 	Vector();//конструктор без параметров
 	Vector(int n);//конструктор с параметрами
-	Vector(const Vector<T>&);//конструктор копирования
 	void Print();
 	void Add();
+	void Razn();
 	T Max();
 	T Min();
 	void Del(int pos);
@@ -65,17 +65,7 @@ Vector<T>::Vector(int n)
 	len = s.size();
 }
 
-////конструктор копирования
-//template <class T>
-//Vector<T>::Vector(const Vector<T>& Vec)
-//{
-//	len = v.len;
-//	//копируем значения стека Vec.s в вектор v
-//	vector v = copy_stack_to_vector(Vec.s);
-//	//копируем вектор v в стек s
-//	s = copy_vector_to_stack(v);
-//}
-// 
+ 
 //печать
 template <class T>
 void Vector<T>::Print()
@@ -101,6 +91,22 @@ void Vector<T>::Add()
 }
 
 
+//Разница между объектами
+template <class T>
+void Vector<T>::Razn()
+{
+	T min = Min();
+	T max = Max();
+	vector<T> v;
+	T t;
+	while (!s.empty())
+	{
+		t = s.top();
+		v.push_back(max - min);
+		s.pop();
+	}
+	s = copy_vector_to_stack(v);
+}
 
 
 //поиск максимального элемента

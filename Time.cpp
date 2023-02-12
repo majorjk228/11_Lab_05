@@ -34,6 +34,16 @@ Time Time::operator+(const Time& t)
 	p.sec = (temp1 + temp2) % 60;
 	return p;
 }
+Time Time::operator-(const Time& t)
+{
+	int temp1 = min * 60 - sec;
+	int temp2 = t.min * 60 - t.sec;
+	Time p;
+	p.min = (temp1 - temp2) / 60;
+	p.sec = (temp1 - temp2) % 60;
+	return p;
+}
+
 //перегрузка бинарной операции деления
 Time Time::operator/(const Time& t)
 {

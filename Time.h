@@ -17,6 +17,7 @@ public:
 	//перегруженные операции
 	Time& operator=(const Time&);
 	Time operator+(const Time&);
+	Time operator-(const Time&);
 	Time operator/(const Time&);
 	Time operator/(const int&);
 	bool operator >(const Time&);

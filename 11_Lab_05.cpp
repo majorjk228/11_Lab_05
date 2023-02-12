@@ -12,18 +12,12 @@ int main()
 {
 	Vector<Time>v(3);
 	v.Print();
-	cout << "Min=" << v.Min() << endl;
-	v.Add();//добавление элемента
-	v.Print();
 
-	cout << "pos for del?";
-	int pos;
-	cin >> pos;//вводим позицию для удаления
-	v.Del(pos);//удаление элемента
-	v.Print();
+	cout << "Min= " << v.Min() << endl;
+	cout << "Max= " << v.Max() << endl;
 
-	cout << "plusuem max+min+element" << endl;
-	v.Summa();
+	cout << "minus max-min-element" << endl;
+	v.Razn();
 	v.Print();
 }
 
